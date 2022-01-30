@@ -2,18 +2,20 @@ from colorama import Fore
 from config import NOTES_ASC, C_SCALE_SHAPE, A_SCALE_SHAPE, G_SCALE_SHAPE, E_SCALE_SHAPE, D_SCALE_SHAPE, fretboard_asc_to_str, scale_map
 
 def main():
-    c = scale_map(C_SCALE_SHAPE, 'C')
-    a = scale_map(A_SCALE_SHAPE, 'A')
-    g = scale_map(G_SCALE_SHAPE, 'A#')
-    e = scale_map(E_SCALE_SHAPE, 'F')
-    d = scale_map(D_SCALE_SHAPE, 'D')
-
     shape_map = {
         "C": C_SCALE_SHAPE,
         "A": A_SCALE_SHAPE,
         "G": G_SCALE_SHAPE,
         "E": E_SCALE_SHAPE,
         "D": D_SCALE_SHAPE
+    }
+
+    color_map = {
+        "C": Fore.BLUE,
+        "A": Fore.RED,
+        "G": Fore.GREEN,
+        "E": Fore.CYAN,
+        "D": Fore.MAGENTA
     }
 
     inp = ""
@@ -45,7 +47,7 @@ def main():
 
         scale = scale_map(shape_map[shape.upper()], root.upper())
 
-        fretboard_asc_to_str(scale, color=Fore.GREEN)
+        fretboard_asc_to_str(scale, color=color_map[shape])
 
 if __name__ == "__main__":
     main()
