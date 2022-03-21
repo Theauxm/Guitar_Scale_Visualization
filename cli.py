@@ -1,6 +1,7 @@
 from colorama import Fore
 from config import NOTES_ASC, C_SCALE_SHAPE, A_SCALE_SHAPE, G_SCALE_SHAPE, E_SCALE_SHAPE, D_SCALE_SHAPE, fretboard_asc_to_str, scale_map
 
+
 def main():
     shape_map = {
         "C": C_SCALE_SHAPE,

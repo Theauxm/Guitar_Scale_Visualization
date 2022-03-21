@@ -1,7 +1,7 @@
 from colorama import Fore
 from colorama import Style
 
-FRETBOARD_LENGTH = 15
+FRETBOARD_LENGTH = 17
 
 NOTES_ASC = ["A", "A#", "B", "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#"]
 NOTES_ASC_A_0 = dict()
